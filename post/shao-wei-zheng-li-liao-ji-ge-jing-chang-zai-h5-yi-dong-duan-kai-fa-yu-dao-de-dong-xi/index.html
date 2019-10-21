@@ -1,0 +1,476 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    稍微整理了几个经常在H5移动端开发遇到的东西 | 大猛的私人空间
+</title>
+<link rel="shortcut icon" href="https://limeng0403.github.io/favicon.ico?v=1571641680552">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://limeng0403.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://limeng0403.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://limeng0403.github.io">
+                <img class="avatar" src="https://limeng0403.github.io/images/avatar.png?v=1571641680552" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    大猛的私人空间
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                        <li>
+                            <a href="https://limeng0403.github.io/post/chang-yong-lian-jie/" class="menu" target="_blank">
+                                常用链接
+                            </a>
+                        </li>
+                        
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            稍微整理了几个经常在H5移动端开发遇到的东西
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">17-59-42</time>
+                            
+                                <a href="https://limeng0403.github.io/tag/BSo_1WLrm" class="post-tag i-tag
+                            i-tag-">
+                            #css
+                        </a>
+                                
+                                <a href="https://limeng0403.github.io/tag/5GkrtXvC5e" class="post-tag i-tag
+                            i-tag-info">
+                            #html
+                        </a>
+                                
+                        </div>
+                        
+                                <div class="post-content">
+                                    <p>不用说我也知道，此类文章太多太多了，常见的譬如：</p>
+<p>viewport、强制浏览器全屏、IOS的Web APP模式、可点击元素出现阴影（这个我觉得真没必要去掉，用户点击是需要反馈的，而这个背景色刚刚好提供了一种反馈）等等，太多啦，这些相信大家百度一下就可以查到很多资料</p>
+<p>本篇文章主要是讲一些其他的或者优化手段。内容不多</p>
+<!-- more -->
+<h3 id="弹出数字键盘">弹出数字键盘</h3>
+<pre><code class="language-html">
+&lt;!-- 有&quot;#&quot; &quot;*&quot;符号输入 --&gt;
+&lt;input type=&quot;tel&quot;&gt;
+&lt;!-- 纯数字 --&gt;
+&lt;input pattern=&quot;\d*&quot;&gt;
+
+</code></pre>
+<p>安卓跟IOS的表现形式应该不一样，大家可以自己试试。当运用了正则pattern后，就不用关注input的类型了<br>
+<img src="https://limeng0403.github.io/post-images/1571217719268.gif" alt=""><br>
+​</p>
+<h3 id="调用系统的某些功能">调用系统的某些功能</h3>
+<pre><code class="language-html">
+&lt;!-- 拨号 --&gt;
+&lt;a href=&quot;tel:10086&quot;&gt;打电话给: 10086&lt;/a&gt;
+&lt;!-- 发送短信 --&gt;
+&lt;a href=&quot;sms:10086&quot;&gt;发短信给: 10086&lt;/a&gt;
+&lt;!-- 发送邮件 --&gt;
+&lt;a href=&quot;mailto:839626987@qq.com&quot;&gt;发邮件给：839626987@qq.com&lt;/a&gt;
+&lt;!-- 选择照片或者拍摄照片 --&gt;
+&lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;
+&lt;!-- 选择视频或者拍摄视频 --&gt;
+&lt;input type=&quot;file&quot; accept=&quot;video/*&quot;&gt;
+&lt;!-- 多选 --&gt;
+&lt;input type=&quot;file&quot; multiple&gt;
+
+</code></pre>
+<p>同上‍♂️<br>
+<img src="https://limeng0403.github.io/post-images/1571217870768.gif" alt=""><br>
+​</p>
+<h3 id="打开原生应用">打开原生应用</h3>
+<pre><code class="language-html">
+&lt;a href=&quot;weixin://&quot;&gt;打开微信&lt;/a&gt;
+&lt;a href=&quot;alipays://&quot;&gt;打开支付宝&lt;/a&gt;
+&lt;a href=&quot;alipays://platformapi/startapp?saId=10000007&quot;&gt;打开支付宝的扫一扫功能&lt;/a&gt;
+&lt;a href=&quot;alipays://platformapi/startapp?appId=60000002&quot;&gt;打开支付宝的蚂蚁森林&lt;/a&gt;
+
+</code></pre>
+<p>这种方式叫做URL Scheme，是一种协议，一般用来访问APP或者APP中的某个功能/页面（如唤醒APP后打开指定页面或者使用某些功能）</p>
+<p>URL Scheme的基本格式如下：</p>
+<p>scheme://[path][?query]<br>
+scheme-应用标识<br>
+path-行为(应用的某个功能/页面)<br>
+query-功能需要的参数</p>
+<p>一般是由APP开发者自己定义，比如规定一些参数或者路径让其他开发者来访问，就像上面的例子</p>
+<p>注意事项：</p>
+<ul>
+<li>唤醒APP的条件是你的手机已经安装了该APP</li>
+<li>某些浏览器会禁用此协议，比如微信内部浏览器（除非开了白名单）</li>
+</ul>
+<p>​<img src="https://limeng0403.github.io/post-images/1571218210599.gif" alt=""></p>
+<p>后面应该会专门写一篇文章用来探讨唤醒APP</p>
+<h3 id="解决active伪类失效">解决active伪类失效</h3>
+<pre><code class="language-html">
+&lt;body ontouchstart&gt;&lt;/body&gt;
+
+</code></pre>
+<p>给<code>body</code>注册一个空事件即可</p>
+<h3 id="忽略自动识别">忽略自动识别</h3>
+<pre><code class="language-html">
+&lt;!-- 忽略浏览器自动识别数字为电话号码 --&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;
+&lt;!-- 忽略浏览器自动识别邮箱账号 --&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;email=no&quot;&gt;
+
+</code></pre>
+<p>当页面上的内容包含了手机号/邮箱等，会自动转换成可点击的链接</p>
+<p>比如你有如下代码：</p>
+<pre><code class="language-html">
+&lt;p&gt;13192733603&lt;/P&gt;
+
+</code></pre>
+<p>但是有些浏览器会识别为手机，并且可以点击拨号</p>
+<h3 id="解决input失焦后页面没有回弹">解决input失焦后页面没有回弹</h3>
+<p><img src="https://limeng0403.github.io/post-images/1571218337679.gif" alt=""><br>
+​<br>
+一般出现在IOS设备中的微信内部浏览器，出现的条件为：</p>
+<ul>
+<li>页面高度过小</li>
+<li>聚焦时，页面需要往上移动的时候</li>
+</ul>
+<p>所以一般<code>input</code>在页面上方或者顶部都不会出现无法回弹</p>
+<p>解决办法为，在聚焦时，获取当前滚动条高度，然后失焦时，赋值之前获取的高度：</p>
+<pre><code class="language-html">
+&lt;template&gt;
+    &lt;input type=&quot;text&quot; @focus=&quot;focus&quot; @blur=&quot;blur&quot;&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    data() {
+        return {
+            scrollTop: 0
+        }
+    },
+ 
+    methods: {
+        focus() {
+            this.scrollTop = document.scrollingElement.scrollTop;
+        },
+ 
+        blur() {
+            document.scrollingElement.scrollTo(0, this.scrollTop);
+        }
+    }
+}
+&lt;/script&gt;
+
+</code></pre>
+<h3 id="禁止长按">禁止长按</h3>
+<p><img src="https://limeng0403.github.io/post-images/1571218468138.gif" alt=""><br>
+​<br>
+以上行为可以总结成这几个（每个手机以及浏览器的表现形式不一样）：长按图片保存、长按选择文字、长按链接/手机号/邮箱时呼出菜单。</p>
+<p>想要禁止这些浏览器的默认行为，可以使用以下CSS：</p>
+<pre><code class="language-css">
+// 禁止长按图片保存
+img {
+    -webkit-touch-callout: none;
+    pointer-events: none; // 像微信浏览器还是无法禁止，加上这行样式即可
+}
+// 禁止长按选择文字
+div {
+    -webkit-user-select: none;
+}
+// 禁止长按呼出菜单
+div {
+    -webkit-touch-callout: none;
+}
+
+</code></pre>
+<h3 id="滑动不顺畅粘手">滑动不顺畅，粘手</h3>
+<p>一般出现在IOS设备中，自定义盒子使用了<code>overflow: auto || scroll</code>后出现的情况。</p>
+<p>优化代码：</p>
+<pre><code class="language-css">
+div {
+    -webkit-overflow-scrolling: touch;
+}
+
+</code></pre>
+<h3 id="屏幕旋转为横屏时字体大小会变">屏幕旋转为横屏时，字体大小会变</h3>
+<p>具体出现的情况不明，有时候有有时候没有，欢迎指出。</p>
+<p>优化代码：</p>
+<pre><code class="language-css">
+* {
+    -webkit-text-size-adjust: 100%;
+}
+
+</code></pre>
+<h3 id="最简单的rem自适应">最简单的rem自适应</h3>
+<p>大家都知道，rem的值是根据根元素的字体大小相对计算的，但是我们每个设备的大小不一样，所以根元素的字体大小要动态设置</p>
+<pre><code class="language-html">
+html {
+    font-size: calc(100vw / 3.75);
+}
+body {
+    font-size: .14rem;
+}
+
+</code></pre>
+<p>效果如下：<br>
+<img src="https://limeng0403.github.io/post-images/1571218644031.gif" alt=""><br>
+​<br>
+像我一般的话，直接搞lib-flexible、postcss-pxtorem就完事啦！</p>
+<h3 id="滑动穿透">滑动穿透</h3>
+<p>当你想在出现遮罩的时候，锁住用户的滚动行为，你可以这么做。</p>
+<p>假设HTML结构如下：</p>
+<pre><code class="language-html">
+&lt;div class=&quot;mask&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;我是弹框&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+<p>CSS样式如下：</p>
+<pre><code class="language-css">
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #333, $alpha: .6);
+        .content {
+            padding: 20px;
+            background-color: #fff;
+            width: 300px;
+        }
+}
+
+</code></pre>
+<p>效果如下：<br>
+<img src="https://limeng0403.github.io/post-images/1571218869210.gif" alt=""><br>
+​<br>
+可以看到，当在遮罩上滑动的时候，是会穿透到父节点的，最简单的办法就是阻住默认行为：</p>
+<pre><code class="language-javascript">
+document.querySelector(&quot;.mask&quot;).addEventListener(&quot;touchmove&quot;, event =&gt; {
+    event.preventDefault();
+});
+
+</code></pre>
+<p>如果在vue中，你可以这么写：</p>
+<pre><code class="language-html">
+&lt;div class=&quot;mask&quot; @touchumove.prevent&gt;&lt;/div&gt;
+
+</code></pre>
+<p>如果.content也有滚动条，那么只要阻止遮罩本身就行：</p>
+<pre><code class="language-javascript">
+document.querySelector(&quot;.mask&quot;).addEventListener(&quot;touchmove&quot;, event =&gt; {
+    if (event.target.classList.contains(&quot;mask&quot;)) event.preventDefault();
+});
+
+</code></pre>
+<p>或者：</p>
+<pre><code class="language-html">
+&lt;div class=&quot;mask&quot; @touchumove.self.prevent&gt;&lt;/div&gt;
+
+</code></pre>
+<p>这样，当出现遮罩的时候用户的滑动就会被锁住啦</p>
+<h3 id="最后">最后</h3>
+<p>像1px边框、唤醒APP后面会单独出文章，因为涉及的内容比较多。</p>
+<p>文章是有点水，请轻喷‍♂️</p>
+<p>如果你觉得这篇文章不错，请别忘记点个赞跟关注哦~</p>
+<hr>
+<p>作者：聪明的汤姆<br>
+链接：<a href="https://juejin.im/post/5d6e1899e51d453b1e478b29">https://juejin.im/post/5d6e1899e51d453b1e478b29</a><br>
+来源：掘金</p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://limeng0403.github.io/post/ta-ren-ji-di-yu">
+                                <h3 class="post-title">
+                                    他人即地狱
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%BC%B9%E5%87%BA%E6%95%B0%E5%AD%97%E9%94%AE%E7%9B%98">弹出数字键盘</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9F%90%E4%BA%9B%E5%8A%9F%E8%83%BD">调用系统的某些功能</a></li>
+<li><a href="#%E6%89%93%E5%BC%80%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8">打开原生应用</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3active%E4%BC%AA%E7%B1%BB%E5%A4%B1%E6%95%88">解决active伪类失效</a></li>
+<li><a href="#%E5%BF%BD%E7%95%A5%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB">忽略自动识别</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3input%E5%A4%B1%E7%84%A6%E5%90%8E%E9%A1%B5%E9%9D%A2%E6%B2%A1%E6%9C%89%E5%9B%9E%E5%BC%B9">解决input失焦后页面没有回弹</a></li>
+<li><a href="#%E7%A6%81%E6%AD%A2%E9%95%BF%E6%8C%89">禁止长按</a></li>
+<li><a href="#%E6%BB%91%E5%8A%A8%E4%B8%8D%E9%A1%BA%E7%95%85%E7%B2%98%E6%89%8B">滑动不顺畅，粘手</a></li>
+<li><a href="#%E5%B1%8F%E5%B9%95%E6%97%8B%E8%BD%AC%E4%B8%BA%E6%A8%AA%E5%B1%8F%E6%97%B6%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E4%BC%9A%E5%8F%98">屏幕旋转为横屏时，字体大小会变</a></li>
+<li><a href="#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84rem%E8%87%AA%E9%80%82%E5%BA%94">最简单的rem自适应</a></li>
+<li><a href="#%E6%BB%91%E5%8A%A8%E7%A9%BF%E9%80%8F">滑动穿透</a></li>
+<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://limeng0403.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '2658b9e6159be87cfc25',
+            clientSecret: 'cbbaf851b6cbaa48e76315c14fba97f10bafb86c',
+            repo: 'limeng0403.github.io',
+            owner: 'limeng0403',
+            admin: ['limeng0403'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
+</html>
