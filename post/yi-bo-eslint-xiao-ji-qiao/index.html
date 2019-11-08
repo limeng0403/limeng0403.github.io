@@ -1,0 +1,407 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    一波ESLint小技巧 | 大猛的私人空间
+</title>
+<link rel="shortcut icon" href="https://limeng0403.github.io/favicon.ico?v=1573182655384">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://limeng0403.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://limeng0403.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://limeng0403.github.io">
+                <img class="avatar" src="https://limeng0403.github.io/images/avatar.png?v=1573182655384" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    大猛的私人空间
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            一波ESLint小技巧
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">Oct 29 302nd</time>
+                            
+                                <a href="https://limeng0403.github.io/tag/dqRdnMHD3" class="post-tag i-tag
+                            i-tag-other_3">
+                            #eslint
+                        </a>
+                                
+                                <a href="https://limeng0403.github.io/tag/7Cy1PR8tr" class="post-tag i-tag
+                            i-tag-banana">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                                <div class="post-content">
+                                    <p>最近借鉴总结了一波ESLint的小技巧，以记录自己的学习心得。现分享给大家，以供参考。如有不足，还请多多指教，谢谢大家。</p>
+<!-- more -->
+<p>参考文献：</p>
+<ul>
+<li>1-VScode格式化ESlint-方法（最全最好用方法！）<a href="https://www.jianshu.com/p/23a5d6194a4b">Jump</a></li>
+<li>我是如何在公司项目中使用ESLint来提升代码质量的<a href="https://www.imooc.com/article/32222">Jump</a></li>
+<li>vue-cli项目中 eslint语法检测在单文件中关闭检测的几种方式<a href="https://blog.csdn.net/csl125/article/details/86591186">Jump</a></li>
+</ul>
+<h3 id="关于eslint">关于ESLint</h3>
+<p>在团队开发中，出于代码规范的考虑，我们通常按照ESlint规范书写代码。加入ESLint有非常多的好处，比如说可以帮助我们避免一些非常低级的错误，一些格式上的问题导致我们在运行生产环境的时候出现一些不明所以的报错。还有就是在跟团队协作的时候，每个人都保持同一个风格进行代码书写，这样团队内部相互去看别人的代码的时候，就可以更容易的看懂。<br>
+但有些低级的格式问题经常被死板的ESLint卡住。。。所以我们应该有个自动格式化工具。</p>
+<h3 id="vue文件一键格式化">Vue文件一键格式化</h3>
+<p>在vscode的文件-首选项-设置里，右侧配置里添加如下代码即可（代码有注释！），从此直接 Ctrl+S就能一键格式化了</p>
+<pre><code class="language-json">{
+  // &quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Program Files\\Git\\bin\\bash.exe&quot;,
+  &quot;vetur.validation.template&quot;: false,
+  &quot;vetur.format.defaultFormatter.js&quot;: &quot;vscode-typescript&quot;,
+  &quot;vetur.format.defaultFormatter.ts&quot;: &quot;vscode-typescript&quot;,
+  &quot;window.zoomLevel&quot;: 2,
+  &quot;editor.tabSize&quot;: 2,
+  &quot;files.autoSave&quot;: &quot;off&quot;,
+  &quot;eslint.validate&quot;: [
+    &quot;javascript&quot;,
+    &quot;javascriptreact&quot;,
+    &quot;html&quot;,
+    {
+      &quot;language&quot;: &quot;vue&quot;,
+      &quot;autoFix&quot;: true
+    }
+  ],
+  &quot;eslint.options&quot;: {
+    &quot;plugins&quot;: [
+      &quot;html&quot;
+    ]
+  },
+  &quot;git.ignoreMissingGitWarning&quot;: true,
+  // &quot;git.autofetch&quot;: true
+  &quot;editor.wordWrap&quot;: &quot;on&quot;,
+  &quot;search.location&quot;: &quot;sidebar&quot;,
+  &quot;javascript.updateImportsOnFileMove.enabled&quot;: &quot;always&quot;,
+  &quot;liveServer.settings.donotShowInfoMsg&quot;: true,
+  &quot;liveServer.settings.donotVerifyTags&quot;: true,
+  &quot;workbench.colorCustomizations&quot;: {
+    &quot;activityBarBadge.background&quot;: &quot;#2979FF&quot;,
+    &quot;list.activeSelectionForeground&quot;: &quot;#2979FF&quot;,
+    &quot;list.inactiveSelectionForeground&quot;: &quot;#2979FF&quot;,
+    &quot;list.highlightForeground&quot;: &quot;#2979FF&quot;,
+    &quot;scrollbarSlider.activeBackground&quot;: &quot;#2979FF50&quot;,
+    &quot;editorSuggestWidget.highlightForeground&quot;: &quot;#2979FF&quot;,
+    &quot;textLink.foreground&quot;: &quot;#2979FF&quot;,
+    &quot;progressBar.background&quot;: &quot;#2979FF&quot;,
+    &quot;pickerGroup.foreground&quot;: &quot;#2979FF&quot;,
+    &quot;tab.activeBorder&quot;: &quot;#2979FF&quot;,
+    &quot;notificationLink.foreground&quot;: &quot;#2979FF&quot;,
+    &quot;editorWidget.resizeBorder&quot;: &quot;#2979FF&quot;,
+    &quot;editorWidget.border&quot;: &quot;#2979FF&quot;,
+    &quot;settings.modifiedItemIndicator&quot;: &quot;#2979FF&quot;,
+    &quot;settings.headerForeground&quot;: &quot;#2979FF&quot;,
+    &quot;panelTitle.activeBorder&quot;: &quot;#2979FF&quot;,
+    &quot;breadcrumb.activeSelectionForeground&quot;: &quot;#2979FF&quot;,
+    &quot;menu.selectionForeground&quot;: &quot;#2979FF&quot;,
+    &quot;menubar.selectionForeground&quot;: &quot;#2979FF&quot;,
+    &quot;editor.findMatchBorder&quot;: &quot;#2979FF&quot;,
+    &quot;selection.background&quot;: &quot;#2979FF40&quot;
+  },
+  &quot;materialTheme.accent&quot;: &quot;Blue&quot;,
+  &quot;terminal.integrated.rendererType&quot;: &quot;dom&quot;,
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  &quot;editor.detectIndentation&quot;: false,
+  // 重新设定tabsize
+  &quot;editor.tabSize&quot;: 2,
+  // #每次保存的时候自动格式化 
+  &quot;editor.formatOnSave&quot;: true,
+  // #每次保存的时候将代码按eslint格式进行修复
+  &quot;eslint.autoFixOnSave&quot;: true,
+  // 添加 vue 支持
+  &quot;eslint.validate&quot;: [
+    &quot;javascript&quot;,
+    &quot;javascriptreact&quot;,
+    {
+      &quot;language&quot;: &quot;vue&quot;,
+      &quot;autoFix&quot;: true
+    }
+  ],
+  //  #让prettier使用eslint的代码格式进行校验 
+  &quot;prettier.eslintIntegration&quot;: true,
+  //  #去掉代码结尾的分号 
+  &quot;prettier.semi&quot;: false,
+  //  #使用带引号替代双引号 
+  &quot;prettier.singleQuote&quot;: true,
+  //  #让函数(名)和后面的括号之间加个空格
+  &quot;javascript.format.insertSpaceBeforeFunctionParenthesis&quot;: true,
+  // #这个按用户自身习惯选择 
+  &quot;vetur.format.defaultFormatter.html&quot;: &quot;js-beautify-html&quot;,
+  // #让vue中的js按编辑器自带的ts格式进行格式化 
+  &quot;vetur.format.defaultFormatter.js&quot;: &quot;vscode-typescript&quot;,
+  &quot;vetur.format.defaultFormatterOptions&quot;: {
+    &quot;js-beautify-html&quot;: {
+      &quot;wrap_attributes&quot;: &quot;force-aligned&quot;
+      // #vue组件中html代码格式化样式
+    }
+  },
+  // 格式化stylus, 需安装Manta's Stylus Supremacy插件
+  &quot;stylusSupremacy.insertColons&quot;: false, // 是否插入冒号
+  &quot;stylusSupremacy.insertSemicolons&quot;: false, // 是否插入分好
+  &quot;stylusSupremacy.insertBraces&quot;: false, // 是否插入大括号
+  &quot;stylusSupremacy.insertNewLineAroundImports&quot;: false, // import之后是否换行
+  &quot;stylusSupremacy.insertNewLineAroundBlocks&quot;: false, // 两个选择器中是否换行
+  &quot;[markdown]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;yzhang.markdown-all-in-one&quot;
+  },
+  &quot;editor.fontSize&quot;: 16
+}
+</code></pre>
+<h3 id="自动修复报错">自动修复报错</h3>
+<p>在报很多错误之后，如果我们一条一条地去修复，就会变的非常的麻烦，相信刚接触ESLint的童鞋都深有体会。其实这些错误都可以让ESLint帮助我们自动地修复。</p>
+<p>在命令行输入：<br>
+<code>npm run lint -- --fix</code><br>
+你会发现，世界一下安静了许多，没有那么多飘红的报错，没有满屏的error和warning。</p>
+<h3 id="组件内关闭eslint检测">组件内关闭eslint检测</h3>
+<p>直接在代码文件中以注释的方式定义 需要注意的是，代码文件内以注释配置的规则会覆盖配置文件里的规则，即优先级要更高。</p>
+<p>临时在一段代码中取消eslint检查，可以如下设置：</p>
+<pre><code class="language-javascript">/* eslint-disable */
+ 
+// Disables all rules between comments 
+alert(‘foo’);
+ 
+/* eslint-enable */
+</code></pre>
+<p>临时在一段代码中取消个别规则的检查（如no-alert, no-console）：</p>
+<pre><code class="language-javascript">/* eslint-disable no-alert, no-console */
+ 
+// Disables no-alert and no-console warnings between comments 
+alert(‘foo’); 
+console.log(‘bar’);
+ 
+/* eslint-enable no-alert, no-console */
+</code></pre>
+<p>在整个文件中取消eslint检查：</p>
+<pre><code class="language-javascript">/* eslint-disable */
+ 
+// Disables all rules for the rest of the file 
+alert(‘foo’);
+</code></pre>
+<p>在整个文件中禁用某一项eslint规则的检查：</p>
+<pre><code class="language-javascript">/* eslint-disable no-alert */
+ 
+// Disables no-alert for the rest of the file 
+alert(‘foo’);
+</code></pre>
+<p>针对某一行禁用eslint检查：</p>
+<pre><code class="language-javascript">alert(‘foo’); // eslint-disable-line
+ 
+// eslint-disable-next-line 
+alert(‘foo’);
+</code></pre>
+<p>针对某一行的某一具体规则禁用eslint检查：</p>
+<pre><code class="language-javascript">alert(‘foo’); // eslint-disable-line no-alert
+ 
+// eslint-disable-next-line no-alert 
+alert(‘foo’);
+</code></pre>
+<p>针对某一行禁用多项具体规则的检查：</p>
+<pre><code class="language-javascript">alert(‘foo’); // eslint-disable-line no-alert, quotes, semi
+ 
+// eslint-disable-next-line no-alert, quotes, semi 
+alert(‘foo’); 
+</code></pre>
+<h3 id="总结">总结</h3>
+<p>……其实都是些取巧的小方法。<br>
+路漫漫其修远兮，与诸君共勉。<br>
+PMP，必胜！！！</p>
+<hr>
+<p>作者：豆包君<br>
+链接：<a href="https://juejin.im/post/5db6b901518825552e29a760">https://juejin.im/post/5db6b901518825552e29a760</a><br>
+来源：掘金<br>
+著作权归作者所有。</p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://limeng0403.github.io/post/13-ge-js-shu-zu-jing-jian-ji-qiao-yi-qi-lai-kan-kan">
+                                <h3 class="post-title">
+                                    13 个 JS 数组精简技巧，一起来看看
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8Eeslint">关于ESLint</a></li>
+<li><a href="#vue%E6%96%87%E4%BB%B6%E4%B8%80%E9%94%AE%E6%A0%BC%E5%BC%8F%E5%8C%96">Vue文件一键格式化</a></li>
+<li><a href="#%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%8A%A5%E9%94%99">自动修复报错</a></li>
+<li><a href="#%E7%BB%84%E4%BB%B6%E5%86%85%E5%85%B3%E9%97%ADeslint%E6%A3%80%E6%B5%8B">组件内关闭eslint检测</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://limeng0403.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '2658b9e6159be87cfc25',
+            clientSecret: 'cbbaf851b6cbaa48e76315c14fba97f10bafb86c',
+            repo: 'limeng0403.github.io',
+            owner: 'limeng0403',
+            admin: ['limeng0403'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
+</html>
