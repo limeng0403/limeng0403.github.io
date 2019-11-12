@@ -1,109 +1,85 @@
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    自己搭建ss/ssr服务器教程 | 大猛的私人空间
-</title>
-<link rel="shortcut icon" href="https://limeng0403.github.io/favicon.ico?v=1573529302477">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<title>自己搭建ss/ssr服务器教程 | 大猛的私人空间</title>
+<meta name="description" content="他人即地狱" />
+<link rel="shortcut icon" href="https://limeng0403.github.io/favicon.ico?v=1573529435917">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://limeng0403.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://limeng0403.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
-        
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-                
 
-                    
-                            
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://limeng0403.github.io">
-                <img class="avatar" src="https://limeng0403.github.io/images/avatar.png?v=1573529302477" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    大猛的私人空间
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
-    </div>
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://limeng0403.github.io">
+  <img class="avatar" src="https://limeng0403.github.io/images/avatar.png?v=1573529435917" alt="">
+  </a>
+  <h1 class="site-title">
+    大猛的私人空间
+  </h1>
+  <p class="site-description">
+    他人即地狱
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            自己搭建ss/ssr服务器教程
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">Oct 21 294th</time>
-                            
-                                <a href="https://limeng0403.github.io/tag/D4osDk0et" class="post-tag i-tag
-                            i-tag-warning">
-                            #服务器
-                        </a>
-                                
-                        </div>
-                        
-                                <div class="post-content">
-                                    <p><strong>2018.2.23对教程的一些细节进行补充，方便初学者。</strong></p>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              自己搭建ss/ssr服务器教程
+            </h2>
+            <div class="post-info">
+              <span>
+                Oct 21 294th
+              </span>
+              <span>
+                18 min read
+              </span>
+              
+                <a href="https://limeng0403.github.io/tag/D4osDk0et" class="post-tag">
+                  # 服务器
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><strong>2018.2.23对教程的一些细节进行补充，方便初学者。</strong></p>
 <!-- more -->
 <p>【客户端下载】</p>
 <p>第一次电脑系统使用SSR/SS客户端时，需要安装NET Framework 4.0，不然无法正常使用，<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=17718">微软官网下载</a>。NET Framework 4.0是SSR/SS的运行库，没有这个SSR/SS客户端无法正常运行。有的电脑系统可能会自带NET Framework 4.0。</p>
@@ -257,33 +233,9 @@
 <p>如果还有问题可以在这个帖子留言，或者自己网上搜索不明白的地方。多实践会更好。第一次部署时会慢一点，熟练了之后，就很快了。</p>
 <p><a href="https://github.com/getlantern/forum/issues/5620">转接自：https://github.com/getlantern/forum/issues/5620</a></p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://limeng0403.github.io/post/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi">
-                                <h3 class="post-title">
-                                    稍微整理了几个经常在H5移动端开发遇到的东西
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
 <li>
 <ul>
 <li>
@@ -296,80 +248,97 @@
 </li>
 </ul>
 
-        </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
-    </div>
-    
-                            
-
-                </div>
-
-
-
-
+              </div>
             </div>
+          </article>
+        </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://limeng0403.github.io/post/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi">
+              <h3 class="post-title">
+                稍微整理了几个经常在H5移动端开发遇到的东西
+              </h3>
+            </a>
+          </div>
+        
 
-            <div class="site-footer">
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '2658b9e6159be87cfc25',
+    clientSecret: 'cbbaf851b6cbaa48e76315c14fba97f10bafb86c',
+    repo: 'limeng0403.github.io',
+    owner: 'limeng0403',
+    admin: ['limeng0403'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
   <a class="rss" href="https://limeng0403.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
 </script>
 
-
+      </div>
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
-        
-            <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: '2658b9e6159be87cfc25',
-            clientSecret: 'cbbaf851b6cbaa48e76315c14fba97f10bafb86c',
-            repo: 'limeng0403.github.io',
-            owner: 'limeng0403',
-            admin: ['limeng0403'],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
-
-        gitalk.render('gitalk-container')
-    }
-</script>
-                
-
-                    
-                                
-</body>
-
+  </body>
 </html>
