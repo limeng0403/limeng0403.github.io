@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lionney.coding.me/</id>
     <title>大猛的私人空间</title>
-    <updated>2019-11-13T07:09:47.292Z</updated>
+    <updated>2019-11-15T09:03:53.575Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lionney.coding.me/"/>
     <link rel="self" href="http://lionney.coding.me//atom.xml"/>
@@ -10,6 +10,105 @@
     <logo>http://lionney.coding.me//images/avatar.png</logo>
     <icon>http://lionney.coding.me//favicon.ico</icon>
     <rights>All rights reserved 2019, 大猛的私人空间</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS简单的继承]]></title>
+        <id>http://lionney.coding.me//post/css-jian-dan-de-ji-cheng</id>
+        <link href="http://lionney.coding.me//post/css-jian-dan-de-ji-cheng">
+        </link>
+        <updated>2019-11-15T08:58:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>也许你瞧不起以前的 css ，但是你不该再轻视眼下的 css 。近年来 css 的变量系统已逐步得到各大浏览器厂商支持，自定义选择器等强势袭来，嵌套系统/模块系统也在路上...为了更好的掌握 css 这门语言，很有必要把之前零零散散的 css 知识回炉重造下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>也许你瞧不起以前的 css ，但是你不该再轻视眼下的 css 。近年来 css 的变量系统已逐步得到各大浏览器厂商支持，自定义选择器等强势袭来，嵌套系统/模块系统也在路上...为了更好的掌握 css 这门语言，很有必要把之前零零散散的 css 知识回炉重造下。</p>
+<!-- more -->
+<p>css 作为一门语言而，也有其继承原理，虽然简单，你却未必掌握。</p>
+<h3 id="属性的是否默认继承">属性的是否默认继承</h3>
+<p>初始值是指当属性没有指定值时的默认值，如这些语句的值都是默认值：<code>background-color: transparent</code>、<code>left: auto</code> 、<code>float: none</code>、<code>width: auto</code> 等。</p>
+<p>css 的继承很简单，分为默认继承的和默认不继承的，但所有属性都可以通过设置 <code>inherit</code> 实现继承。</p>
+<p>当没有指定值时，默认继承的属性取父元素的同属性的计算值（相当于设置了 <code>inherit</code> ），默认不继承的属性取属性的初始值（时相当于设置了 <code>initial</code> ）。</p>
+<h4 id="默认继承的-inherited-yes-的属性">默认继承的 (&quot;Inherited: Yes&quot;) 的属性：</h4>
+<ul>
+<li>所有元素默认继承：visibility、cursor</li>
+<li>内联元素默认继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction</li>
+<li>块状元素默认继承：text-indent、text-align</li>
+<li>列表元素默认继承：list-style、list-style-type、list-style-position、list-style-image</li>
+<li>表格元素默认继承：border-collapse</li>
+</ul>
+<h4 id="默认不继承的inherited-no-的属性">默认不继承的(&quot;Inherited: No&quot;) 的属性：</h4>
+<ul>
+<li>文本属性默认不继承：vertical-align、text-decoration、text-shadow、white-space、unicode-bidi</li>
+<li>盒子属性默认不继承：display、width、height、padding、margin、border、min-width、min-height、max-width、max-height、overflow、clip</li>
+<li>背景属性默认不继承：background、background-color、background-image、background-repeat、background-position、background-attachment</li>
+<li>定位属性默认不继承：float、clear、position、top、right、bottom、left、z-index</li>
+<li>内容属性默认不继承：content、counter-reset、counter-increment</li>
+<li>轮廓属性默认不继承：outline-style、outline-width、outline-color、outline</li>
+<li>页面属性默认不继承：size、page-break-before、page-break-after</li>
+<li>声音属性默认不继承：pause-before、pause-after、pause、cue-before、cue-after、cue、play-during</li>
+</ul>
+<p>可以看到涉及到文本相关的属性，都是默认继承的，毕竟 css 设计之初就是为了更好的在网页上呈现文字。</p>
+<p>需要注意的是，部分属性的默认值是会根据元素的 <code>display</code> 属性的值而计算的，比如 <code>vertical-align</code> 属性，如果是 <code>display: inline</code> 元素，则其计算值为基线对齐 <code>vertical-align: baseline</code> ，如果是 <code>display: inline-block</code> 元素，则其计算值为 <code>vertical-align: bottom</code> 。详情请参考 <a href="https://juejin.im/post/5ce607a7e51d454f6f16eb3d#heading-18">这篇文章</a>。</p>
+<h3 id="通用属性值-initial-inherit-和-unset">通用属性值 initial、inherit 和 unset</h3>
+<p>css 为控制继承提供了四个特殊的通用属性值（属性 <code>revert</code> 只有很少的浏览器支持，所以实际上是三个），每个 css 属性都能使用这些值。</p>
+<ul>
+<li>
+<p>inherit</p>
+<p>设置该属性会使子元素属性和父元素相同。实际上，就是“开启继承”。</p>
+</li>
+<li>
+<p>initial</p>
+<p>将属性的初始值应用于元素。实际上，就是“重置为默认值”。</p>
+</li>
+<li>
+<p>unset</p>
+<p>将属性重置为自然值，也就是如果属性是自然继承的那么就是 <code>inherit</code> ，否则和 <code>initial</code> 一样。</p>
+</li>
+</ul>
+<h4 id="实例">实例</h4>
+<p>这些通用属性值可以有很多妙用，举个栗子：</p>
+<p><strong>1.利用 <code>inherit</code> 实现如下图片倒影：</strong></p>
+<figure data-type="image" tabindex="1"><img src="http://lionney.coding.me//post-images/1573808451348.jpg" alt=""></figure>
+<pre><code class="language-css">div::after {
+    content: &quot;&quot;;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    background-image: inherit; // 背景图片继承，这一般人想不到吧...
+    transform: rotateX(180deg);
+}
+</code></pre>
+<p><strong>2.利用 <code>initial</code> 重置 <code>left</code> 为默认值 <code>auto</code>：</strong></p>
+<pre><code class="language-css">div {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+div + div {
+  left: initial;
+  right: 20px;
+}
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="http://lionney.coding.me//post-images/1573808467846.jpg" alt=""></figure>
+<p>例子中 <code>div</code> 设置过了 <code>left</code> ，div2 的 <code>right</code> 若要生效，须将 <code>left</code> 重置为初始值 <code>initial</code> （或者 <code>unset</code> ）。</p>
+<p><strong>3.利用 <code>unset</code> 将属性重置为未设置之前的值：</strong></p>
+<figure data-type="image" tabindex="3"><img src="http://lionney.coding.me//post-images/1573808478837.jpg" alt=""></figure>
+<p>例子中 <code>p</code> 标签的 <code>color</code> 是默认继承属性，所以此时 <code>color: unset</code> 相当于 <code>color: inherit</code> 。 <code>p</code> 标签的 <code>border</code> 属性是默认不继承属性，所以此时 <code>border: unset</code> 相当于 <code>border: initial</code> 。</p>
+<pre><code class="language-css">.unset {
+  border: unset;
+  color: unset;
+}
+</code></pre>
+<h3 id="总结">总结</h3>
+<p>css 的继承真的很简单，只需要记住那些默认继承的，剩下的都是默认不继承的。而默认继承的元素除了文本相关的哪些，只有 <code>visibility、cursor</code> 比较常用了，也是比较容易记得的。</p>
+<h3 id="后记">后记</h3>
+<p>本文确确实实参考了<a href="https://github.com/chokcoco/iCSS/issues/13">这篇文章</a>，但是我在看原文之时确确实实也是没有完全搞明白 css 的继承到底是什么样的，所以我花了很多时间查了很多文档来整理思路，最后才明白了 css 的继承就是这么简单的分为默认继承和默认不继承两种而已。很抱歉一开始没有附上原文链接，但是原文有60个章节，我只是摘了其中一章的知识点来重新梳理，来让自己更加清晰并让大家更容易理解 css 的继承。且我本身是为了完成耗子叔的 <code>ARTS</code> 打卡计划而写这篇文章的，我掘金上发布的最近两篇文章也是，都有抄袭的痕迹，这没办法我本身水平不咋地如果完全靠自己输出根本写不出来什么文章，但我坚信把别人的东西完全消化了变成自己的，也是一种非常有效的学习方法。</p>
+<p>我年前这几个月被996了，时间少的可怜，能够挤出来一点写篇文章甚是不易，我当然希望掘友们能够认可。尽管是拿来主义，但我会对内容进行部分总结加工，让他更加宜懂，更有针对性，更容易记忆。我最近打算把我的 css 知识回炉重造下，所以未来几篇文章肯定都是关于 css 的并且会有几篇出自 <a href="https://github.com/chokcoco/iCSS">这里</a>，我也会把 《css揭秘》、《css选择器世界》看完并写出自己的总结篇。如果人人都那么爱读书，那么我写的文章肯定没人看。但事实上并不是。所以我的文章目前是写给那些没有看过那么多书的读者，我也真心的希望能够在我自身进步的同时，帮助大家一起进步，帮助大家更好的学习。</p>
+<hr>
+<p>作者：<a href="https://juejin.im/post/5dcb89186fb9a04a752ba034">幻灵尔依</a><br>
+来源：掘金<br>
+著作权归作者所有。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[14 个拷贝数组的 JS 技巧]]></title>
         <id>http://lionney.coding.me//post/14-ge-kao-bei-shu-zu-de-js-ji-qiao</id>
@@ -2044,60 +2143,6 @@ document.querySelector(&quot;.mask&quot;).addEventListener(&quot;touchmove&quot;
 <p>未来，它一定会成为你离不开的伙伴</p>
 <p>尽情发挥你的才华吧！</p>
 <p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[不能让下一辈看到的感慨]]></title>
-        <id>http://lionney.coding.me//post/bu-neng-rang-xia-yi-bei-kan-dao-de-gan-gai</id>
-        <link href="http://lionney.coding.me//post/bu-neng-rang-xia-yi-bei-kan-dao-de-gan-gai">
-        </link>
-        <updated>1019-10-28T06:07:49.000Z</updated>
-        <summary type="html"><![CDATA[<p>扎心不？<br>
-西安交大，年愈七旬的交大女教授即兴发表了一番感慨：</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>扎心不？<br>
-西安交大，年愈七旬的交大女教授即兴发表了一番感慨：</p>
-<!-- more -->
-<p>我想几乎每个人都会有一个亲人群，我的亲人群叫【相亲相爱一家人】，有亲人转发了这样一篇文章：</p>
-<blockquote></blockquote>
-<p>《不能让下一辈看到的感慨》</p>
-<p>已是几次住女儿家了。<br>
-看到了孩子们的富足、前卫、潮流生活，很羡慕。<br>
-但是，就是有那么点想不通：他们如此完美了，我们老人们为什么还要节衣缩食地&quot;接济&quot;人家？<br>
-他们的化妆品有多少？随意买，经常买，刚打开又买，以至于一堆一堆地，过期了也不知道，而后扔掉，再扔掉……<br>
-他们的衣服，自组织新家庭，就没有带来以前的旧衣服。全是新买的……<br>
-他们的零食，五花八门，五湖四海。一袋袋、一瓶瓶、一盒盒、随意一款就是一袋白面与一桶麻油的钱。<br>
-他们的冰箱里应有尽有，却经常去饭店。他们的工资，挣多少也是月光。<br>
-他们给大人们的礼物，也就是那么一点点，一点点…………。<br>
-我们，至今节俭，脑子里想的仍是——能省则省，不多花一分冤枉钱。买打折的、买低廉的、买一口口儿想吃的，攒下的大把的钱，然后悄无声息地，倾力补贴给儿孙们。</p>
-<p>下一代用得着吗？<br>
-下一代理解吗？<br>
-下一代感恩吗？<br>
-是存在代沟？<br>
-还是时代不同？</p>
-<p>也许我们这一代并不知道，当我们奉为稀罕的食物，给孩子们带去后，人家至今在那搁着、晾着，根本不屑一顾。一旦忘记了，很可能会毫不心痛地扔掉。<br>
-我们给人家的是当地的商品，而人家却想的是外地的商品;  我们好不容易去外地给人家带了礼物，人家却又说喜欢国际的。<br>
-于是在这个清晨，我看到孩子们随意丢在沙发上、灶台旁的各种巧克力呀、甜点呀、零食袋呀，脑子里就出现一大块猪肉、各种袋面、各种蔬菜水果……<br>
-我们为什么不在有生之年，大方一把吃尽自己所想吃的地方小吃、特色餐饮……走出家门去享受大自然，趁着腿脚还灵便，有计划地到全国各地逛一逛，欣赏一下祖国的大好河山呢？<br>
-孩子们的孩子出生了，我们为什么非得给人家带，这不是我们的责任，他（她）们整天吃喝玩乐，不理家业，沒了自己的责任和担当。 我们完全可以享受下自己的生活，不要等着他（她）们的养老，那是一场梦。<br>
-我们有什么必要为他(她)们的不懂事而买单呢？您的钱款财物，还是留给落后时代的自己吧……！<br>
-把自己的身体武装好，别太抠！年轻人去4S店维护一次车的费用都是论万的，你连自己这台老机器都舍不得维护值吗！<br>
-赶快行动，从改变观念做起，全面改良自己的生活习惯。换一种活法，想方设法活出吾辈的精气神。不然就再没机会啦！</p>
-<hr>
-<p>我身边很多人都会说：买房肯定要用父母的钱啊！孩子肯定要让父母带啊，我哪有时间！孩子当然要吃好穿好啊，不能亏了孩子啊。</p>
-<p>可能很多人都已经习惯了从父母身上刮油水，很多人很平淡的说，反正父母的钱早晚都是我们的。</p>
-<p>说的没错，父母的钱早晚是孩子。但是，我听着却心寒。在父母活着的时候，作为孩子的你，为父母做过什么？有没有用尊重的口吻与父母对话？有没有关心过父母的身体？有没有了解过父母的所思所想？有没有在平时的生活中表达对父母的感恩之情？</p>
-<p>没有，很少有，几乎没有。不知道从什么时候开始，孩子把父母的付出当做理所当然了。</p>
-<p>这跟社会、环境没有关系，别不要脸的把罪恶都往社会和环境上推。社会是由人组成的，环境是由人造就的，说回来，人，就是根基。</p>
-<p>现在的人都冷了，不冷活不下去。都自私了，不自私活不好。都无感情了，有感情活不长。</p>
-<p>突然，想听摇滚了，那种呐喊可以让我的心舒服。</p>
-<p>突然，想听电子音乐了，想去酒吧了，那种环境让我知道，我还是我，我也可以肆无忌惮。</p>
-<p>长大你就懂了。我长大了，依旧不懂。总有人无意的对我说阳光一点，但是你总得告诉我阳光是什么。总有人告诉我要多一些正能量，这正能量在哪？我看到只在某些人的嘴里，但是他们所做所为，让我觉得恶心。</p>
-<p>我喜欢韩寒，他说真话，实话，他把真话、实话说出来，让你自己去思考你自己的人生。从小到大我听过很多道理，依然过不好自己的人生。</p>
-<p>千人千面，我不会读心术，我不知道你喜欢听什么不喜欢听什么，所以，我没那么高的情商。我喜欢给我当头棒喝的人，虽然我很生气，我很愤怒，但是我知道，你不会在背后捅我一刀。</p>
-<p>我不喜欢情商高的人，他们太善于隐藏自己，我感到恐怖。</p>
-<p>我赞同地球是人类监狱的说法，我们可能是外星人研究失败的试验品，又不忍心消灭，于是就把我们放在这个星球上，创造我们的生物在某个地方通过我们无法理解的方式在观察我们，研究我们，当我们学会了互爱互助真心分享，他们就会出现在我们的世界，把我们接到更美好的世界。但是，我们现在的所做所为，不值得他们现身。</p>
-<p>崔健——《从头再来》</p>
 ]]></content>
     </entry>
 </feed>
