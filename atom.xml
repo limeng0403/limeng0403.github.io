@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lionney.coding.me/</id>
     <title>大猛的私人空间</title>
-    <updated>2019-11-29T09:50:25.351Z</updated>
+    <updated>2019-12-06T09:39:39.347Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lionney.coding.me/"/>
     <link rel="self" href="http://lionney.coding.me//atom.xml"/>
@@ -10,6 +10,68 @@
     <logo>http://lionney.coding.me//images/avatar.png</logo>
     <icon>http://lionney.coding.me//favicon.ico</icon>
     <rights>All rights reserved 2019, 大猛的私人空间</rights>
+    <entry>
+        <title type="html"><![CDATA[我的Github Star]]></title>
+        <id>http://lionney.coding.me//post/wo-de-github-star</id>
+        <link href="http://lionney.coding.me//post/wo-de-github-star">
+        </link>
+        <updated>2019-12-06T08:48:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>逛github，发现好多有意思的项目，就关注了好多的项目，从现在开始，准备把它们整理一下，其一，是为了温故知新，其二，是为了分享，物尽其用。</p>
+<p>因为我是搞前端的，大部分都是跟前端有关的，在此说明一下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>逛github，发现好多有意思的项目，就关注了好多的项目，从现在开始，准备把它们整理一下，其一，是为了温故知新，其二，是为了分享，物尽其用。</p>
+<p>因为我是搞前端的，大部分都是跟前端有关的，在此说明一下。</p>
+<!-- more -->
+<hr>
+<h3 id="js-工具dayjs"><a href="https://github.com/iamkun/dayjs">[js &amp; 工具]Day.js</a></h3>
+<figure data-type="image" tabindex="1"><img src="https://img.shields.io/badge/tag-javascript-green?logo=javascript" alt=""></figure>
+<blockquote>
+<p>Day.js 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样. 如果您曾经用过 Moment.js, 那么您已经知道如何使用 Day.js</p>
+</blockquote>
+<p>使用示例：</p>
+<pre><code class="language-javascript">dayjs('2018-08-08') // parse
+dayjs().format('{YYYY} MM-DDTHH:mm:ss SSS [Z] A') // display
+dayjs().set('month', 3).month() // get &amp; set
+dayjs().add(1, 'year') // manipulate
+dayjs().isBefore(dayjs()) // query
+</code></pre>
+<hr>
+<h3 id="nodejs-api网易云音乐api服务"><a href="https://github.com/Binaryify/NeteaseCloudMusicApi">[nodejs &amp; API]网易云音乐API服务</a></h3>
+<figure data-type="image" tabindex="2"><img src="https://img.shields.io/badge/tag-nodejs-green?logo=node.js" alt=""></figure>
+<blockquote>
+<p>网易云音乐 Node.js API service</p>
+</blockquote>
+<blockquote>
+<p>登录、刷新登录、发送验证码、校验验证码、注册(修改密码)、获取用户信息 , 歌单，收藏，mv, dj 数量...</p>
+</blockquote>
+<hr>
+<h3 id="博客-文摘中文独立博客列表"><a href="https://github.com/timqian/chinese-independent-blogs">[博客 &amp; 文摘]中文独立博客列表</a></h3>
+<figure data-type="image" tabindex="3"><img src="https://img.shields.io/badge/tag-blogs-green" alt=""></figure>
+<blockquote>
+<p>阮一峰的网络日志、酷 壳 – CoolShell、可能吧、云风的 BLOG...</p>
+</blockquote>
+<hr>
+<h3 id="nodejs-工具更安全的nodejs缓冲区api"><a href="https://github.com/feross/safe-buffer">[nodejs &amp; 工具]更安全的Node.js缓冲区API</a></h3>
+<figure data-type="image" tabindex="4"><img src="https://img.shields.io/badge/tag-nodejs-green?logo=node.js" alt=""></figure>
+<p>使用示例：</p>
+<pre><code class="language-javascript">var Buffer = require('safe-buffer').Buffer
+
+// Existing buffer code will continue to work without issues:
+
+new Buffer('hey', 'utf8')
+new Buffer([1, 2, 3], 'utf8')
+new Buffer(obj)
+new Buffer(16) // create an uninitialized buffer (potentially unsafe)
+
+// But you can use these new explicit APIs to make clear what you want:
+
+Buffer.from('hey', 'utf8') // convert from many types to a Buffer
+Buffer.alloc(16) // create a zero-filled buffer (safe)
+Buffer.allocUnsafe(16) // create an uninitialized buffer (potentially unsafe)
+</code></pre>
+<h3 id="未完待续-最后一次更新-2019-12-6">未完待续 最后一次更新 2019-12-6</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS简单的继承]]></title>
         <id>http://lionney.coding.me//post/css-jian-dan-de-ji-cheng</id>
@@ -2111,38 +2173,6 @@ document.querySelector(&quot;.mask&quot;).addEventListener(&quot;touchmove&quot;
 链接：<a href="https://www.zhihu.com/question/19622014/answer/12415055">https://www.zhihu.com/question/19622014/answer/12415055</a><br>
 来源：知乎<br>
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://lionney.coding.me//post/hello-gridea</id>
-        <link href="http://lionney.coding.me//post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
