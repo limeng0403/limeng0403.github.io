@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://limeng0403.github.io/</id>
+    <id>http://blog.mayiya.vip/</id>
     <title>大猛的私人空间</title>
-    <updated>2019-12-09T05:56:29.123Z</updated>
+    <updated>2019-12-09T06:08:04.271Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://limeng0403.github.io/"/>
-    <link rel="self" href="https://limeng0403.github.io//atom.xml"/>
+    <link rel="alternate" href="http://blog.mayiya.vip/"/>
+    <link rel="self" href="http://blog.mayiya.vip//atom.xml"/>
     <subtitle>他人即地狱</subtitle>
-    <logo>https://limeng0403.github.io//images/avatar.png</logo>
-    <icon>https://limeng0403.github.io//favicon.ico</icon>
+    <logo>http://blog.mayiya.vip//images/avatar.png</logo>
+    <icon>http://blog.mayiya.vip//favicon.ico</icon>
     <rights>All rights reserved 2019, 大猛的私人空间</rights>
     <entry>
         <title type="html"><![CDATA[我的Github Star]]></title>
-        <id>https://limeng0403.github.io//post/wo-de-github-star</id>
-        <link href="https://limeng0403.github.io//post/wo-de-github-star">
+        <id>http://blog.mayiya.vip//post/wo-de-github-star</id>
+        <link href="http://blog.mayiya.vip//post/wo-de-github-star">
         </link>
         <updated>2019-12-06T08:48:36.000Z</updated>
         <summary type="html"><![CDATA[<p>逛github，发现好多有意思的项目，就关注了好多的项目，从现在开始，准备把它们整理一下，其一，是为了温故知新，其二，是为了分享，物尽其用。</p>
@@ -74,8 +74,8 @@ Buffer.allocUnsafe(16) // create an uninitialized buffer (potentially unsafe)
     </entry>
     <entry>
         <title type="html"><![CDATA[CSS简单的继承]]></title>
-        <id>https://limeng0403.github.io//post/css-jian-dan-de-ji-cheng</id>
-        <link href="https://limeng0403.github.io//post/css-jian-dan-de-ji-cheng">
+        <id>http://blog.mayiya.vip//post/css-jian-dan-de-ji-cheng</id>
+        <link href="http://blog.mayiya.vip//post/css-jian-dan-de-ji-cheng">
         </link>
         <updated>2019-11-15T08:58:16.000Z</updated>
         <summary type="html"><![CDATA[<p>也许你瞧不起以前的 css ，但是你不该再轻视眼下的 css 。近年来 css 的变量系统已逐步得到各大浏览器厂商支持，自定义选择器等强势袭来，嵌套系统/模块系统也在路上...为了更好的掌握 css 这门语言，很有必要把之前零零散散的 css 知识回炉重造下。</p>
@@ -127,7 +127,7 @@ Buffer.allocUnsafe(16) // create an uninitialized buffer (potentially unsafe)
 <h4 id="实例">实例</h4>
 <p>这些通用属性值可以有很多妙用，举个栗子：</p>
 <p><strong>1.利用 <code>inherit</code> 实现如下图片倒影：</strong></p>
-<figure data-type="image" tabindex="1"><img src="https://limeng0403.github.io//post-images/1573808451348.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://blog.mayiya.vip//post-images/1573808451348.jpg" alt=""></figure>
 <pre><code class="language-css">div::after {
     content: &quot;&quot;;
     position: absolute;
@@ -150,10 +150,10 @@ div + div {
   right: 20px;
 }
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://limeng0403.github.io//post-images/1573808467846.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://blog.mayiya.vip//post-images/1573808467846.jpg" alt=""></figure>
 <p>例子中 <code>div</code> 设置过了 <code>left</code> ，div2 的 <code>right</code> 若要生效，须将 <code>left</code> 重置为初始值 <code>initial</code> （或者 <code>unset</code> ）。</p>
 <p><strong>3.利用 <code>unset</code> 将属性重置为未设置之前的值：</strong></p>
-<figure data-type="image" tabindex="3"><img src="https://limeng0403.github.io//post-images/1573808478837.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="http://blog.mayiya.vip//post-images/1573808478837.jpg" alt=""></figure>
 <p>例子中 <code>p</code> 标签的 <code>color</code> 是默认继承属性，所以此时 <code>color: unset</code> 相当于 <code>color: inherit</code> 。 <code>p</code> 标签的 <code>border</code> 属性是默认不继承属性，所以此时 <code>border: unset</code> 相当于 <code>border: initial</code> 。</p>
 <pre><code class="language-css">.unset {
   border: unset;
@@ -173,8 +173,8 @@ div + div {
     </entry>
     <entry>
         <title type="html"><![CDATA[14 个拷贝数组的 JS 技巧]]></title>
-        <id>https://limeng0403.github.io//post/14-ge-kao-bei-shu-zu-de-js-ji-qiao</id>
-        <link href="https://limeng0403.github.io//post/14-ge-kao-bei-shu-zu-de-js-ji-qiao">
+        <id>http://blog.mayiya.vip//post/14-ge-kao-bei-shu-zu-de-js-ji-qiao</id>
+        <link href="http://blog.mayiya.vip//post/14-ge-kao-bei-shu-zu-de-js-ji-qiao">
         </link>
         <updated>2019-11-13T06:15:03.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -401,7 +401,7 @@ console.log(copy)
 console.log(authors)
 </code></pre>
 <p>输出<br>
-<img src="https://limeng0403.github.io//post-images/1573626015252.jpg" alt=""><br>
+<img src="http://blog.mayiya.vip//post-images/1573626015252.jpg" alt=""><br>
 所以上面的技巧适合简单的数据结构，复杂的结构要使用深拷贝。数组拷贝经常被误解，但这并不是因为拷贝过程本身，而是因为缺乏对 JS 如何处理数组及其元素的理解。</p>
 <p>作者：<a href="https://juejin.im/post/5dcb425f6fb9a04aa20361d8">前端小智</a><br>
 来源：掘金<br>
@@ -410,8 +410,8 @@ console.log(authors)
     </entry>
     <entry>
         <title type="html"><![CDATA[通过 20 个棘手的ES6面试问题来提高咱们的 JS 技能]]></title>
-        <id>https://limeng0403.github.io//post/tong-guo-20-ge-ji-shou-de-es6-mian-shi-wen-ti-lai-ti-gao-zan-men-de-js-ji-neng</id>
-        <link href="https://limeng0403.github.io//post/tong-guo-20-ge-ji-shou-de-es6-mian-shi-wen-ti-lai-ti-gao-zan-men-de-js-ji-neng">
+        <id>http://blog.mayiya.vip//post/tong-guo-20-ge-ji-shou-de-es6-mian-shi-wen-ti-lai-ti-gao-zan-men-de-js-ji-neng</id>
+        <link href="http://blog.mayiya.vip//post/tong-guo-20-ge-ji-shou-de-es6-mian-shi-wen-ti-lai-ti-gao-zan-men-de-js-ji-neng">
         </link>
         <updated>2019-11-12T02:43:53.000Z</updated>
         <summary type="html"><![CDATA[<p>ECMAScript 6（以下简称ES6）是 JS 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得 JS 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。接下来咱们来看看 20 道棘手的面试题，通过做题，顺带提升一下咱们的 JS 的技能。</p>
@@ -620,9 +620,9 @@ console.log(add.apply(null, [1, 2])); // 3
 <p>class可以避免构造函数中使用new的常见错误（如果构造函数不是有效的对象，则使构造函数抛出异常）。</p>
 <p>用新语法调用父原型方法的版本比旧语法要简单得多，用super.method()代替ParentConstructor.prototype.method.call(this) 或Object.getPrototypeOf(Object.getPrototypeOf(this)).method.call(this)</p>
 <p>考虑下面代码：<br>
-<img src="https://limeng0403.github.io//post-images/1573528413636.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1573528413636.jpg" alt=""></p>
 <p>使用 ES6 实现上述功能：<br>
-<img src="https://limeng0403.github.io//post-images/1573528421667.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1573528421667.jpg" alt=""></p>
 <h3 id="问题-9-在-js-中定义枚举的首选语法是什么">问题 9: 在 JS 中定义枚举的首选语法是什么</h3>
 <blockquote>
 <p>主题: JavaScript<br>
@@ -876,8 +876,8 @@ person.profession.name = &quot;doctor&quot;; // TypeError: Cannot assign to read
     </entry>
     <entry>
         <title type="html"><![CDATA[35 道咱们必须要清楚的 React 面试题]]></title>
-        <id>https://limeng0403.github.io//post/35-dao-zan-men-bi-xu-yao-qing-chu-de-react-mian-shi-ti</id>
-        <link href="https://limeng0403.github.io//post/35-dao-zan-men-bi-xu-yao-qing-chu-de-react-mian-shi-ti">
+        <id>http://blog.mayiya.vip//post/35-dao-zan-men-bi-xu-yao-qing-chu-de-react-mian-shi-ti</id>
+        <link href="http://blog.mayiya.vip//post/35-dao-zan-men-bi-xu-yao-qing-chu-de-react-mian-shi-ti">
         </link>
         <updated>2019-11-08T02:34:58.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="问题1什么是虚拟dom">问题1：什么是虚拟DOM？</h3>
@@ -1112,7 +1112,7 @@ HOC 可以用于以下许多用例</p>
 难度: ⭐⭐⭐</p>
 </blockquote>
 <p>请看下面的代码：<br>
-<img src="https://limeng0403.github.io//post-images/1573181405119.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1573181405119.jpg" alt=""></p>
 <p>答案：</p>
 <p>1.在构造函数没有将 props 传递给 super，它应该包括以下行</p>
 <pre><code class="language-javascript">constructor(props) {
@@ -1152,7 +1152,7 @@ This.setState({message: ‘Hello World’});
 <p>4.Unmounting：在这个阶段，组件已经不再被需要了，它从浏览器 DOM 中卸载下来。这个阶段包含 componentWillUnmount 生命周期方法。</p>
 <p>除以上四个常用生命周期外，还有一个错误处理的阶段：</p>
 <p>Error Handling：在这个阶段，不论在渲染的过程中，还是在生命周期方法中或是在任何子组件的构造函数中发生错误，该组件都会被调用。这个阶段包含了 componentDidCatch 生命周期方法。</p>
-<figure data-type="image" tabindex="1"><img src="https://limeng0403.github.io//post-images/1573181817393.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://blog.mayiya.vip//post-images/1573181817393.jpg" alt=""></figure>
 <h3 id="问题-15react-的生命周期方法有哪些">问题 15：React 的生命周期方法有哪些？</h3>
 <blockquote>
 <p>主题: React<br>
@@ -1508,8 +1508,8 @@ var component = (
     </entry>
     <entry>
         <title type="html"><![CDATA[一波ESLint小技巧]]></title>
-        <id>https://limeng0403.github.io//post/yi-bo-eslint-xiao-ji-qiao</id>
-        <link href="https://limeng0403.github.io//post/yi-bo-eslint-xiao-ji-qiao">
+        <id>http://blog.mayiya.vip//post/yi-bo-eslint-xiao-ji-qiao</id>
+        <link href="http://blog.mayiya.vip//post/yi-bo-eslint-xiao-ji-qiao">
         </link>
         <updated>2019-10-29T03:18:37.000Z</updated>
         <summary type="html"><![CDATA[<p>最近借鉴总结了一波ESLint的小技巧，以记录自己的学习心得。现分享给大家，以供参考。如有不足，还请多多指教，谢谢大家。</p>
@@ -1695,8 +1695,8 @@ PMP，必胜！！！</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[13 个 JS 数组精简技巧，一起来看看]]></title>
-        <id>https://limeng0403.github.io//post/13-ge-js-shu-zu-jing-jian-ji-qiao-yi-qi-lai-kan-kan</id>
-        <link href="https://limeng0403.github.io//post/13-ge-js-shu-zu-jing-jian-ji-qiao-yi-qi-lai-kan-kan">
+        <id>http://blog.mayiya.vip//post/13-ge-js-shu-zu-jing-jian-ji-qiao-yi-qi-lai-kan-kan</id>
+        <link href="http://blog.mayiya.vip//post/13-ge-js-shu-zu-jing-jian-ji-qiao-yi-qi-lai-kan-kan">
         </link>
         <updated>2019-10-28T06:53:12.000Z</updated>
         <summary type="html"><![CDATA[<p>数组是 JS 最常见的一种数据结构，咱们在开发中也经常用到,在这篇文章中,提供一些小技巧,帮助咱们提高开发效率。</p>
@@ -1704,42 +1704,42 @@ PMP，必胜！！！</p>
         <content type="html"><![CDATA[<p>数组是 JS 最常见的一种数据结构，咱们在开发中也经常用到,在这篇文章中,提供一些小技巧,帮助咱们提高开发效率。</p>
 <!-- more -->
 <h3 id="1-删除数组的重复项">1. 删除数组的重复项</h3>
-<figure data-type="image" tabindex="1"><img src="https://limeng0403.github.io//post-images/1572245823432.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://blog.mayiya.vip//post-images/1572245823432.jpg" alt=""></figure>
 <h3 id="2-替换数组中的特定值">2. 替换数组中的特定值</h3>
 <p>有时在创建代码时需要替换数组中的特定值，有一种很好的简短方法可以做到这一点，咱们可以使用<code>.splice(start、value to remove、valueToAdd)</code>，这些参数指定咱们希望从哪里开始修改、修改多少个值和替换新值。<br>
-<img src="https://limeng0403.github.io//post-images/1572245838872.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245838872.jpg" alt=""></p>
 <h3 id="3-arrayfrom-达到-map-的效果">3. Array.from 达到 .map 的效果</h3>
 <p>咱们都知道 .map() 方法，.from() 方法也可以用来获得类似的效果且代码也很简洁。<br>
-<img src="https://limeng0403.github.io//post-images/1572245854556.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245854556.jpg" alt=""></p>
 <h3 id="4置空数组">4.置空数组</h3>
 <p>有时候我们需要清空数组，一个快捷的方法就是直接让数组的 length 属性为 0，就可以清空数组了。<br>
-<img src="https://limeng0403.github.io//post-images/1572245861070.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245861070.jpg" alt=""></p>
 <h3 id="5-将数组转换为对象">5. 将数组转换为对象</h3>
 <p>有时候，出于某种目的，需要将数组转化成对象，一个简单快速的方法是就使用展开运算符号(...):<br>
-<img src="https://limeng0403.github.io//post-images/1572245879011.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245879011.jpg" alt=""></p>
 <h3 id="6-用数据填充数组">6. 用数据填充数组</h3>
 <p>在某些情况下，当咱们创建一个数组并希望用一些数据来填充它，这时 .fill()方法可以帮助咱们。<br>
-<img src="https://limeng0403.github.io//post-images/1572245899008.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245899008.jpg" alt=""></p>
 <h3 id="7-数组合并">7. 数组合并</h3>
 <p>使用展开操作符，也可以将多个数组合并起来。<br>
-<img src="https://limeng0403.github.io//post-images/1572245910308.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245910308.jpg" alt=""></p>
 <h3 id="8求两个数组的交集">8.求两个数组的交集</h3>
 <p>求两个数组的交集在面试中也是有一定难度的正点，为了找到两个数组的交集，首先使用上面的方法确保所检查数组中的值不重复，接着使用.filter 方法和.includes方法。如下所示：<br>
-<img src="https://limeng0403.github.io//post-images/1572245919222.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245919222.jpg" alt=""></p>
 <h3 id="9从数组中删除虚值">9.从数组中删除虚值</h3>
 <p>在 JS 中，虚值有 false, 0，''， null, NaN, undefined。咱们可以 .filter() 方法来过滤这些虚值。<br>
-<img src="https://limeng0403.github.io//post-images/1572245928056.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245928056.jpg" alt=""></p>
 <h3 id="10-从数组中获取随机值">10. 从数组中获取随机值</h3>
 <p>有时我们需要从数组中随机选择一个值。一种方便的方法是可以根据数组长度获得一个随机索引，如下所示：<br>
-<img src="https://limeng0403.github.io//post-images/1572245936487.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245936487.jpg" alt=""></p>
 <h3 id="11反转数组">11.反转数组</h3>
 <p>现在，咱们需要反转数组时，没有必要通过复杂的循环和函数来创建它，数组的 reverse 方法就可以做了：<br>
-<img src="https://limeng0403.github.io//post-images/1572245946150.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245946150.jpg" alt=""></p>
 <h3 id="12-lastindexof-方法">12 lastIndexOf() 方法</h3>
-<figure data-type="image" tabindex="2"><img src="https://limeng0403.github.io//post-images/1572245956829.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://blog.mayiya.vip//post-images/1572245956829.jpg" alt=""></figure>
 <h3 id="13对数组中的所有值求和">13.对数组中的所有值求和</h3>
 <p>JS 面试中也经常用 reduce 方法来巧妙的解决问题<br>
-<img src="https://limeng0403.github.io//post-images/1572245965279.jpg" alt=""></p>
+<img src="http://blog.mayiya.vip//post-images/1572245965279.jpg" alt=""></p>
 <h3 id="总结">总结</h3>
 <p>在本文中，介绍了13个技巧，希望它们可以帮助编写简洁代码，如果你还有更好的办法，欢迎留言讨论。<br>
 代码部署后可能存在的BUG没法实时知道，事后为了解决这些BUG，花了大量的时间进行log 调试，这边顺便给大家推荐一个好用的BUG监控工具 Fundebug。</p>
@@ -1753,8 +1753,8 @@ PMP，必胜！！！</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[自己搭建ss/ssr服务器教程]]></title>
-        <id>https://limeng0403.github.io//post/zi-ji-da-jian-ssssr-fu-wu-qi-jiao-cheng</id>
-        <link href="https://limeng0403.github.io//post/zi-ji-da-jian-ssssr-fu-wu-qi-jiao-cheng">
+        <id>http://blog.mayiya.vip//post/zi-ji-da-jian-ssssr-fu-wu-qi-jiao-cheng</id>
+        <link href="http://blog.mayiya.vip//post/zi-ji-da-jian-ssssr-fu-wu-qi-jiao-cheng">
         </link>
         <updated>2019-10-21T08:07:37.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>2018.2.23对教程的一些细节进行补充，方便初学者。</strong></p>
@@ -1916,8 +1916,8 @@ PMP，必胜！！！</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[稍微整理了几个经常在H5移动端开发遇到的东西]]></title>
-        <id>https://limeng0403.github.io//post/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi</id>
-        <link href="https://limeng0403.github.io//post/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi">
+        <id>http://blog.mayiya.vip//post/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi</id>
+        <link href="http://blog.mayiya.vip//post/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi">
         </link>
         <updated>2019-10-16T09:19:59.000Z</updated>
         <summary type="html"><![CDATA[<p>不用说我也知道，此类文章太多太多了，常见的譬如：</p>
@@ -1937,7 +1937,7 @@ PMP，必胜！！！</p>
 
 </code></pre>
 <p>安卓跟IOS的表现形式应该不一样，大家可以自己试试。当运用了正则pattern后，就不用关注input的类型了<br>
-<img src="https://limeng0403.github.io//post-images/1571217719268.gif" alt=""><br>
+<img src="http://blog.mayiya.vip//post-images/1571217719268.gif" alt=""><br>
 ​</p>
 <h3 id="调用系统的某些功能">调用系统的某些功能</h3>
 <pre><code class="language-html">
@@ -1956,7 +1956,7 @@ PMP，必胜！！！</p>
 
 </code></pre>
 <p>同上‍♂️<br>
-<img src="https://limeng0403.github.io//post-images/1571217870768.gif" alt=""><br>
+<img src="http://blog.mayiya.vip//post-images/1571217870768.gif" alt=""><br>
 ​</p>
 <h3 id="打开原生应用">打开原生应用</h3>
 <pre><code class="language-html">
@@ -1978,7 +1978,7 @@ query-功能需要的参数</p>
 <li>唤醒APP的条件是你的手机已经安装了该APP</li>
 <li>某些浏览器会禁用此协议，比如微信内部浏览器（除非开了白名单）</li>
 </ul>
-<p>​<img src="https://limeng0403.github.io//post-images/1571218210599.gif" alt=""></p>
+<p>​<img src="http://blog.mayiya.vip//post-images/1571218210599.gif" alt=""></p>
 <p>后面应该会专门写一篇文章用来探讨唤醒APP</p>
 <h3 id="解决active伪类失效">解决active伪类失效</h3>
 <pre><code class="language-html">
@@ -2002,7 +2002,7 @@ query-功能需要的参数</p>
 </code></pre>
 <p>但是有些浏览器会识别为手机，并且可以点击拨号</p>
 <h3 id="解决input失焦后页面没有回弹">解决input失焦后页面没有回弹</h3>
-<p><img src="https://limeng0403.github.io//post-images/1571218337679.gif" alt=""><br>
+<p><img src="http://blog.mayiya.vip//post-images/1571218337679.gif" alt=""><br>
 ​<br>
 一般出现在IOS设备中的微信内部浏览器，出现的条件为：</p>
 <ul>
@@ -2037,7 +2037,7 @@ export default {
 
 </code></pre>
 <h3 id="禁止长按">禁止长按</h3>
-<p><img src="https://limeng0403.github.io//post-images/1571218468138.gif" alt=""><br>
+<p><img src="http://blog.mayiya.vip//post-images/1571218468138.gif" alt=""><br>
 ​<br>
 以上行为可以总结成这几个（每个手机以及浏览器的表现形式不一样）：长按图片保存、长按选择文字、长按链接/手机号/邮箱时呼出菜单。</p>
 <p>想要禁止这些浏览器的默认行为，可以使用以下CSS：</p>
@@ -2087,7 +2087,7 @@ body {
 
 </code></pre>
 <p>效果如下：<br>
-<img src="https://limeng0403.github.io//post-images/1571218644031.gif" alt=""><br>
+<img src="http://blog.mayiya.vip//post-images/1571218644031.gif" alt=""><br>
 ​<br>
 像我一般的话，直接搞lib-flexible、postcss-pxtorem就完事啦！</p>
 <h3 id="滑动穿透">滑动穿透</h3>
@@ -2120,7 +2120,7 @@ body {
 
 </code></pre>
 <p>效果如下：<br>
-<img src="https://limeng0403.github.io//post-images/1571218869210.gif" alt=""><br>
+<img src="http://blog.mayiya.vip//post-images/1571218869210.gif" alt=""><br>
 ​<br>
 可以看到，当在遮罩上滑动的时候，是会穿透到父节点的，最简单的办法就是阻住默认行为：</p>
 <pre><code class="language-javascript">
@@ -2159,8 +2159,8 @@ document.querySelector(&quot;.mask&quot;).addEventListener(&quot;touchmove&quot;
     </entry>
     <entry>
         <title type="html"><![CDATA[他人即地狱]]></title>
-        <id>https://limeng0403.github.io//post/ta-ren-ji-di-yu</id>
-        <link href="https://limeng0403.github.io//post/ta-ren-ji-di-yu">
+        <id>http://blog.mayiya.vip//post/ta-ren-ji-di-yu</id>
+        <link href="http://blog.mayiya.vip//post/ta-ren-ji-di-yu">
         </link>
         <updated>2019-10-16T08:09:39.000Z</updated>
         <summary type="html"><![CDATA[<p>可以看别人的演绎，不过最好结合小说自己去理解。</p>
