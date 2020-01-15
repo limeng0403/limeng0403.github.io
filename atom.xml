@@ -2,14 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.mayiya.vip</id>
     <title>大猛的私人空间</title>
-    <updated>2019-12-31T09:38:44.894Z</updated>
+    <updated>2020-01-15T07:53:37.585Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.mayiya.vip"/>
     <link rel="self" href="http://blog.mayiya.vip/atom.xml"/>
     <subtitle>他人即地狱</subtitle>
     <logo>http://blog.mayiya.vip/images/avatar.png</logo>
     <icon>http://blog.mayiya.vip/favicon.ico</icon>
-    <rights>All rights reserved 2019, 大猛的私人空间</rights>
+    <rights>All rights reserved 2020, 大猛的私人空间</rights>
+    <entry>
+        <title type="html"><![CDATA[ES7、ES8、ES9、ES10新特性大盘点]]></title>
+        <id>http://blog.mayiya.vip/es7es8es9es10-xin-te-xing-da-pan-dian</id>
+        <link href="http://blog.mayiya.vip/es7es8es9es10-xin-te-xing-da-pan-dian">
+        </link>
+        <updated>2020-01-15T06:30:14.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ GitHub 开源项目推荐]]></title>
         <id>http://blog.mayiya.vip/github-kai-yuan-xiang-mu-tui-jian</id>
@@ -129,21 +136,6 @@
         <summary type="html"><![CDATA[<p><strong>2018.2.23对教程的一些细节进行补充，方便初学者。</strong></p>
 ]]></summary>
         <content type="html"><![CDATA[<p><strong>2018.2.23对教程的一些细节进行补充，方便初学者。</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[稍微整理了几个经常在H5移动端开发遇到的东西]]></title>
-        <id>http://blog.mayiya.vip/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi</id>
-        <link href="http://blog.mayiya.vip/shao-wei-zheng-li-liao-ji-ge-jing-chang-zai-h5-yi-dong-duan-kai-fa-yu-dao-de-dong-xi">
-        </link>
-        <updated>2019-10-16T09:19:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>不用说我也知道，此类文章太多太多了，常见的譬如：</p>
-<p>viewport、强制浏览器全屏、IOS的Web APP模式、可点击元素出现阴影（这个我觉得真没必要去掉，用户点击是需要反馈的，而这个背景色刚刚好提供了一种反馈）等等，太多啦，这些相信大家百度一下就可以查到很多资料</p>
-<p>本篇文章主要是讲一些其他的或者优化手段。内容不多</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>不用说我也知道，此类文章太多太多了，常见的譬如：</p>
-<p>viewport、强制浏览器全屏、IOS的Web APP模式、可点击元素出现阴影（这个我觉得真没必要去掉，用户点击是需要反馈的，而这个背景色刚刚好提供了一种反馈）等等，太多啦，这些相信大家百度一下就可以查到很多资料</p>
-<p>本篇文章主要是讲一些其他的或者优化手段。内容不多</p>
 ]]></content>
     </entry>
 </feed>
